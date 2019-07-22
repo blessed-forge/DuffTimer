@@ -1,0 +1,8 @@
+2009-05-08  Thurwell  <Thurwell>
+
+[e39460f193c8] [v2.2.3]
+* DuffTimer.lua, DuffTimer.mod:
+
+Added an onshutdown position to save anchor positions, see if that fixes the bug.
+
+

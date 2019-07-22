@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--	Project: DuffTimer.	Project Author:  Thurwell	Project Date: 2009-05-09T04:47:09Z
+	Project Revision: 129	Project Version: v2.2.3 
+	File Author: Thurwell	File Revision: 129	File DatE:	2009-05-09T04:47:09Z	-->
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+<Assets>
+	<Texture name="DuffTimerBackGround" file="background.tga" />
+</Assets>
+<Windows>
+	<Window name="DuffTimer_Container" movable="false" show="false" handleinput="false" sticky="false" savesettings="true">
+		<Size>
+			<AbsPoint x="250" y="25"/>
+		</Size>
+	<Anchors>
+		<Anchor point="center" relativePoint="center" relativeTo="Root">
+			<AbsPoint x="0" y="0"/>
+		</Anchor>
+	</Anchors>
+
+	</Window>
+	<Window name="DuffTimer_Bar" inherits="DuffTimer_Container" layer="default" savesettings="false" handleinput="false" >
+		<Windows>
+			<DynamicImage name="$parent_Icon" handleinput="false" filtering="true" >
+				<Size>
+					<AbsPoint x="23" y = "23" />
+				</Size>
+				<Anchors>
+					<Anchor relativePoint="topleft" relativeTo="$parent" point="topleft">
+						<AbsPoint x="0" y="0"/>
+					</Anchor>
+				</Anchors>
+				<TexDims x="64" y="64"/>
+			</DynamicImage>
+			<Label name="$parent_Timer" font="font_default_text_small" textalign="left" autoresize="false" handleinput="false">
+				<Size>
+					<AbsPoint x="40" y="17"/>
+				</Size>
+				<Anchors>
+					<Anchor relativePoint="right" point="topright" relativeTo="$parent">
+						<AbsPoint x="0" y="12"/>
+					</Anchor>
+				</Anchors>
+			</Label>
+			<FullResizeImage name="$parent_StatusBarBG" inherits="EA_FullResizeImage_BlackTransparent" handleinput="false" layer="background">
+				<Anchors>
+					<Anchor relativePoint="bottomleft" relativeTo="$parent_Icon" point="bottomright">
+						<AbsPoint x="0" y="0"/>
+					</Anchor>
+					<Anchor relativePoint="topright" relativeTo="$parent" point="topright">
+						<AbsPoint x="-45" y="o"/>
+					</Anchor>
+				</Anchors>
+			</FullResizeImage>
+		        <DynamicImage name="$parent_StatusBar" layer="default" texture="tint_square" handleinput="false">
+				<Anchors>
+					<Anchor relativePoint="left" relativeTo="$parent_StatusBarBG" point="left">
+						<AbsPoint x="0" y="0"/>
+					</Anchor>
+				</Anchors>
+		        </DynamicImage>
+			<Window name="$parent_BuffName" handleinput="false">
+				<Anchors>
+					<Anchor relativePoint="topleft" relativeTo="$parent_StatusBarBG" point="topleft">
+						<AbsPoint x="2" y="3"/>
+					</Anchor>
+					<Anchor relativePoint="bottomright" relativeTo="$parent_StatusBarBG" point="bottomright">
+						<AbsPoint x="-2" y="-3"/>
+					</Anchor>
+				</Anchors>
+				<Windows>
+					<Label name="$parent_Label" font="font_default_text_small" textalign="left" warnOnTextCropped="false" wordwrap="false" >					
+						<Anchors>
+							<Anchor relativePoint="left" relativeTo="$parent" point="left">
+								<AbsPoint x="0" y="0"/>
+							</Anchor>
+						</Anchors>
+					</Label>
+				</Windows>
+			</Window>
+		</Windows>
+	</Window>
+	<Window name="DuffTimer_IconBar"  layer="default" savesettings="false" handleinput="false" >
+		<Size>
+			<AbsPoint x="32" y="25"/>
+		</Size>
+		<Windows>
+			<DynamicImage name="$parent_Icon" handleinput="false" filtering="true" >
+				<Size>
+					<AbsPoint x="23" y="23" />
+				</Size>
+				<Anchors>
+					<Anchor relativePoint="topright" relativeTo="$parent" point="topright">
+						<AbsPoint x="0" y="0"/>
+					</Anchor>
+				</Anchors>
+				<TexDims x="64" y="64"/>
+			</DynamicImage>
+			<Label name="$parent_Timer" font="font_default_text_small" textalign="center" handleinput="false"  warnOnTextCropped="false" wordwrap="false" >
+				<Size>
+					<AbsPoint x="23"  y="18"/>
+				</Size>
+				<Anchors>
+					<Anchor relativePoint="bottom" point="bottom" relativeTo="$parent_Icon">
+						<AbsPoint x="0" y="-1"/>
+					</Anchor>
+				</Anchors>
+			</Label>
+			<FullResizeImage name="$parent_StatusBarBG" inherits="EA_FullResizeImage_BlackTransparent" handleinput="false">
+				<Anchors>
+					<Anchor relativePoint="bottomright" relativeTo="$parent_Icon" point="bottomleft">
+						<AbsPoint x="0" y="0"/>
+					</Anchor>
+					<Anchor relativePoint="topleft" relativeTo="$parent" point="topleft">
+						<AbsPoint x="0" y="0"/>
+					</Anchor>
+				</Anchors>
+			</FullResizeImage>
+		        <DynamicImage name="$parent_StatusBar" layer="default" texture="tint_square" handleinput="false">
+				<Anchors>
+					<Anchor relativePoint="bottom" relativeTo="$parent_StatusBarBG" point="bottom">
+						<AbsPoint x="0" y="0"/>
+					</Anchor>
+				</Anchors>
+		        </DynamicImage>
+		</Windows>
+	</Window>
+	<Window name="DuffTimer_Icon"  layer="default" savesettings="false" handleinput="false" >
+		<Size>
+			<AbsPoint x="27" y="27"/>
+		</Size>
+		<Windows>
+			<DynamicImage name="$parent_Icon" handleinput="false" filtering="true" >
+				<Size>
+					<AbsPoint x="23" y="23"/>
+				</Size>
+				<Anchors>
+					<Anchor relativePoint="center" relativeTo="$parent" point="center">
+						<AbsPoint x="0" y="0"/>
+					</Anchor>
+				</Anchors>
+				<TexDims x="64" y="64"/>
+			</DynamicImage>
+			<DynamicImage name="$parent_Border" texture="DuffTimerBackGround" textureScale=".84375" handleinput="false">
+				<Anchors>
+					<Anchor relativePoint="topright" relativeTo="$parent_Icon" point="topright">
+						<AbsPoint x="2" y="-2"/>
+					</Anchor>
+					<Anchor relativePoint="bottomleft" relativeTo="$parent_Icon" point="bottomleft">
+						<AbsPoint x="-2" y="2"/>
+					</Anchor>
+				</Anchors>
+			</DynamicImage>
+			<Label name="$parent_Timer" font="font_default_text_small" textalign="center"  handleinput="false"  warnOnTextCropped="false" wordwrap="false" >
+				<Size>
+					<AbsPoint x="27" y="18"/>
+				</Size>
+				<Anchors>
+					<Anchor relativePoint="bottom" point="bottom" relativeTo="$parent_Border">
+						<AbsPoint x="0" y="-2"/>
+					</Anchor>
+				</Anchors>
+			</Label>
+		</Windows>
+	</Window>
+	<Window name="DuffTimer_ReverseBar" inherits="DuffTimer_Container" layer="default" savesettings="false" handleinput="false" >
+		<Windows>
+			<DynamicImage name="$parent_Icon" handleinput="false" filtering="true" >
+				<Size>
+					<AbsPoint x="23" y="23"/>
+				</Size>
+				<Anchors>
+					<Anchor relativePoint="topright" relativeTo="$parent" point="topright">
+						<AbsPoint x="0" y="0"/>
+					</Anchor>
+				</Anchors>
+				<TexDims x="64" y="64"/>
+			</DynamicImage>
+			<Label name="$parent_Timer" font="font_default_text_small" textalign="right" autoresize="false" handleinput="false">
+				<Size>
+					<AbsPoint x="40" y="17"/>
+				</Size>
+				<Anchors>
+					<Anchor relativePoint="left" point="topleft" relativeTo="$parent">
+						<AbsPoint x="0" y="12"/>
+					</Anchor>
+				</Anchors>
+			</Label>
+			<FullResizeImage name="$parent_StatusBarBG" inherits="EA_FullResizeImage_BlackTransparent" handleinput="false" layer="background">
+				<Anchors>
+					<Anchor relativePoint="bottomright" relativeTo="$parent_Icon" point="bottomleft">
+						<AbsPoint x="0" y="0"/>
+					</Anchor>
+					<Anchor relativePoint="topleft" relativeTo="$parent" point="topleft">
+						<AbsPoint x="45" y="0"/>
+					</Anchor>
+				</Anchors>
+			</FullResizeImage>
+		        <DynamicImage name="$parent_StatusBar" layer="default" texture="tint_square" handleinput="false">
+				<Anchors>
+					<Anchor relativePoint="right" relativeTo="$parent_StatusBarBG" point="right">
+						<AbsPoint x="0" y="0"/>
+					</Anchor>
+				</Anchors>
+		        </DynamicImage>
+			<Window name="$parent_BuffName" handleinput="false">
+				<Anchors>
+					<Anchor relativePoint="topleft" relativeTo="$parent_StatusBarBG" point="topleft">
+						<AbsPoint x="2" y="3"/>
+					</Anchor>
+					<Anchor relativePoint="bottomright" relativeTo="$parent_StatusBarBG" point="bottomright">
+						<AbsPoint x="-2" y="-3"/>
+					</Anchor>
+				</Anchors>
+				<Windows>
+					<Label name="$parent_Label" font="font_default_text_small" textalign="left" warnOnTextCropped="false" wordwrap="false" >					
+						<Anchors>
+							<Anchor relativePoint="left" relativeTo="$parent" point="left">
+								<AbsPoint x="0" y="0"/>
+							</Anchor>
+						</Anchors>
+					</Label>
+				</Windows>
+			</Window>
+		</Windows>
+	</Window>
+</Windows>
+</Interface>
+

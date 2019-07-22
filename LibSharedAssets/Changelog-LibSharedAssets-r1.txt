@@ -1,0 +1,13 @@
+2009-01-08  Aiiane  <aiiane@aiiane.net>
+
+	* LibSharedAssets.lua:
+	Take out pre-loading routine for now.
+	[f96de19e5382] [tip]
+
+2008-12-29  Aiiane  <aiiane@aiiane.net>
+
+	* .docmeta, .pkgmeta, LibSharedAssets.lua, LibStub.lua:
+	Initial commit - provides a framework for sharing textures among
+	addons.
+	[eb414ed3d2f7]
+

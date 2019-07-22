@@ -1,0 +1,299 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+<!--	Project: DuffTimer.	Project Author:  Thurwell	Project Date: 2009-05-09T04:47:09Z
+	Project Revision: 129	Project Version: v2.2.3 
+	File Author: Thurwell	File Revision: 129	File Date:	2009-05-09T04:47:09Z	-->
+<Windows>
+	<Button name="DuffTimerOptions_TabButton" font="font_clear_small_bold" inherits="EA_Button_Default" textalign="center" textAutoFitMinScale="0.5">
+		<Size>
+			<AbsPoint x="90"  y="50" />
+		</Size>
+		<ResizeImages>
+			<Normal             def="EA_Button_TabNormal" />
+			<NormalHighlit      def="EA_Button_TabHighlit" />
+			<Pressed            def="EA_Button_TabPressed" />
+			<PressedHighlit     def="EA_Button_TabPressed" />
+			<Disabled           def="EA_Button_TabDisabled" />
+		</ResizeImages>
+		<TextColors>
+			<Normal             r="222" g="192" b= "50" />
+			<NormalHighlit      r="222" g="192" b= "50" />
+			<Pressed            r="235" g="235" b="235" />
+			<PressedHighlit     r="255" g= "85" b=  "0" />
+			<Disabled           r= "128" g= "128" b= "128" />
+		</TextColors>
+		<EventHandlers>
+			<EventHandler event="OnLButtonUp" function="DuffTimer.Options.OnLButtonUpTab" />
+			<EventHandler event="OnRButtonUp" function="DuffTimer.Options.OnRButtonUpTab" />
+		</EventHandlers>
+	</Button>
+	<Window name="DuffTimerOptions_CheckBox" >
+		<Size>
+			<AbsPoint x="350" y="35"/>
+		</Size>
+		<Windows>
+			<Label name="$parent_lbl" inherits="DefaultWindowSmallText" textalign="left" textAutoFitMinScale="0.5">
+				<Size>
+					<AbsPoint x="250" y="32"/>
+				</Size>
+				<Anchors>
+					<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+						<AbsPoint x="0" y="0"/>
+					</Anchor>
+				</Anchors>
+				<Color r="255" g="255" b="255" a="255"/>
+				<EventHandlers>
+					<EventHandler event="OnMouseOver" function="DuffTimer.Options.OnMouseOver" />
+				</EventHandlers>
+			</Label>
+	
+			<Button name="$parent_chk" inherits="EA_Button_DefaultCheckBox">
+				<Anchors>
+					<Anchor point="topright" relativePoint="topright" relativeTo="$parent">
+						<AbsPoint x="0" y="-3" />
+					</Anchor>
+				</Anchors>
+				<EventHandlers>
+					<EventHandler event="OnLButtonUp" function="DuffTimer.Options.OnLButtonUp" />
+				</EventHandlers>
+			</Button>
+		</Windows>
+	</Window>
+	<Window name="DuffTimerOptions_EditBox" layer="default" >
+		<Size>
+			<AbsPoint x="350" y="35"/>
+		</Size>
+		<Windows>
+			<Label name="$parent_lbl" inherits="DefaultWindowSmallText" textalign="left" textAutoFitMinScale="0.5">
+				<Size>
+					<AbsPoint x="225" y="32"/>
+				</Size>
+				<Anchors>
+					<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+						<AbsPoint x="0" y="0"/>
+					</Anchor>
+				</Anchors>
+				<Color r="255" g="255" b="255" a="255"/>
+				<EventHandlers>
+					<EventHandler event="OnMouseOver" function="DuffTimer.Options.OnMouseOver" />
+				</EventHandlers>
+			</Label>
+			<EditBox name="$parent_ebx" inherits="EA_EditBox_DefaultFrame" layer="default" maxchars="5">
+				<Size>
+					<AbsPoint x="75" y="32"/>
+				</Size>
+				<Anchors>
+					<Anchor point="topright" relativePoint="topright" relativeTo="$parent">
+						<AbsPoint x="0" y="-5"/>
+					</Anchor>
+				</Anchors>
+				<EventHandlers>
+   					<EventHandler event="OnKeyEscape" function="DuffTimer.Options.OnEditBoxChanged" />
+					<EventHandler event="OnKeyEnter" function="DuffTimer.Options.OnEditBoxChanged" />
+	       			</EventHandlers>
+			</EditBox>
+		</Windows>
+	</Window>
+	<Window name="DuffTimerOptions_ComboBox" layer="default" >
+		<Size>
+			<AbsPoint x="350" y="35"/>
+		</Size>
+		<Windows>
+			<Label name="$parent_lbl" inherits="DefaultWindowSmallText" textalign="left" textAutoFitMinScale="0.5">
+				<Size>
+					<AbsPoint x="225" y="32"/>
+				</Size>
+				<Anchors>
+					<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+						<AbsPoint x="0" y="0"/>
+					</Anchor>
+				</Anchors>
+				<Color r="255" g="255" b="255" a="255"/>
+				<EventHandlers>
+					<EventHandler event="OnMouseOver" function="DuffTimer.Options.OnMouseOver" />
+				</EventHandlers>
+			</Label>
+			
+			<ComboBox name="$parent_cmb" inherits="EA_ComboBox_DefaultResizableSmall" layer="default" warnOnTextCropped="false">
+				<Anchors>
+					<Anchor point="right" relativePoint="right" relativeTo="$parent">
+						<AbsPoint x="0" y="-5"/>
+					</Anchor>
+				</Anchors>
+				<EventHandlers>
+					<EventHandler event="OnSelChanged" function="DuffTimer.Options.OnSelChanged" />
+	       			</EventHandlers>
+			</ComboBox>
+		</Windows>
+	</Window>
+	<Window name="DuffTimerOptions_LargeComboBox" layer="default" >
+		<Size>
+			<AbsPoint x="350" y="35"/>
+		</Size>
+		<Windows>
+			<Label name="$parent_lbl" inherits="DefaultWindowSmallText" textalign="left" textAutoFitMinScale="0.5">
+				<Size>
+					<AbsPoint x="225" y="32"/>
+				</Size>
+				<Anchors>
+					<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+						<AbsPoint x="0" y="0"/>
+					</Anchor>
+				</Anchors>
+				<Color r="255" g="255" b="255" a="255"/>
+				<EventHandlers>
+					<EventHandler event="OnMouseOver" function="DuffTimer.Options.OnMouseOver" />
+				</EventHandlers>
+			</Label>
+			
+			<ComboBox name="$parent_cmb" inherits="EA_ComboBox_DefaultResizable" layer="default" warnOnTextCropped="false">
+				<Anchors>
+					<Anchor point="right" relativePoint="right" relativeTo="$parent">
+						<AbsPoint x="0" y="-5"/>
+					</Anchor>
+				</Anchors>
+				<EventHandlers>
+					<EventHandler event="OnSelChanged" function="DuffTimer.Options.OnSelChanged" />
+	       			</EventHandlers>
+			</ComboBox>
+		</Windows>
+	</Window>
+	<Window name="DuffTimerOptions_Slider" layer="default" >
+		<Size>
+			<AbsPoint x="375" y="40"/>
+		</Size>
+		<Windows>
+			<Label name="$parent_lbl" inherits="DefaultWindowSmallText" textalign="left" textAutoFitMinScale="0.5">
+				<Size>
+					<AbsPoint x="100" y="32"/>
+				</Size>
+				<Anchors>
+					<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+						<AbsPoint x="0" y="0"/>
+					</Anchor>
+				</Anchors>
+				<Color r="255" g="255" b="255" a="255"/>
+				<EventHandlers>
+					<EventHandler event="OnMouseOver" function="DuffTimer.Options.OnMouseOver" />
+				</EventHandlers>
+			</Label>
+			<Label name="$parent_val" font="font_clear_medium_bold" autoresize="true" textalign="right" popable="false" textAutoFitMinScale="0.5">
+				<Size>
+					<AbsPoint x="100" y="32" />
+				</Size>
+				<Anchors>
+					<Anchor point="topright" relativePoint="topright" relativeTo="$parent">
+						<AbsPoint x="0" y="2" />
+					</Anchor>
+				</Anchors>
+				<Color r="150" g="175" b="200" a="255" />
+			</Label>
+			<SliderBar name="$parent_sld" inherits="EA_Default_SliderBar">
+				<Size>
+					<AbsPoint x="225" y="32" />
+				</Size>
+				<Anchors>
+					<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+						<AbsPoint x="100" y="0" />
+					</Anchor>
+				</Anchors>
+				<EventHandlers>
+					<EventHandler event="OnSlide" function="DuffTimer.Options.OnSliderChange" />
+				</EventHandlers>
+			</SliderBar>
+		</Windows>
+	</Window>
+	<Window name="DuffTimerOptions_Color" autoresize="true" popable="false" layer="background">
+		<Size>
+			<AbsPoint x="400" y="180" />
+		</Size>
+		<Windows>
+
+			<FullResizeImage name="$parentSection" inherits="EA_FullResizeImage_TanBorder" layer="background">
+				<Size>
+					<AbsPoint x="400" y="156" />
+				</Size>
+				<Anchors>
+					<Anchor point="bottomleft" relativeTo="$parent" relativePoint="bottomleft">
+						<AbsPoint x="0" y="0" />
+					</Anchor>
+				</Anchors>
+			</FullResizeImage>
+
+			<Label name="$parent_Title_lbl" font="font_clear_small_bold" autoresize="true" textalign="left" layer="popup" popable="false" textAutoFitMinScale="0.5">
+				<Size>
+					<AbsPoint x="300" y="32" />
+				</Size>
+				<Anchors>
+					<Anchor point="topleft" relativeTo="$parent" relativePoint="topleft">
+						<AbsPoint x="5" y="0" />
+					</Anchor>
+				</Anchors>
+				<Color r="255" g="255" b="255" a="255" />
+			</Label>
+			<Window name="$parent_Red" inherits="DuffTimerOptions_Slider" >
+				<Anchors>
+					<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentSection">
+						<AbsPoint x="20" y="20" />
+					</Anchor>
+				</Anchors>
+			</Window>		
+			<Window name="$parent_Green" inherits="DuffTimerOptions_Slider" >
+				<Anchors>
+					<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_Red">
+						<AbsPoint x="0" y="0" />
+					</Anchor>
+				</Anchors>
+			</Window>		
+			<Window name="$parent_Blue" inherits="DuffTimerOptions_Slider" >
+				<Anchors>
+					<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_Green">
+						<AbsPoint x="0" y="0" />
+					</Anchor>
+				</Anchors>
+			</Window>
+		</Windows>
+	</Window>
+	<Window name="DuffTimerOptionsAdvHeader">
+		<Size>
+			<AbsPoint x="350" y="30" />
+		</Size>
+		<Anchors>
+			<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+				<AbsPoint x="0" y="" />
+			</Anchor>
+			<Anchor point="topright" relativePoint="topright" relativeTo="$parent">
+				<AbsPoint x="0" y="" />
+			</Anchor>
+		</Anchors>
+		<EventHandlers>
+			<EventHandler event="OnLButtonUp" function="DuffTimer.Options.ToggleAdvOptions" />
+		</EventHandlers>
+		<Windows>
+			<Button name="$parentPlus" inherits="EA_Button_DefaultPlus" handleinput="false" >
+				<Anchors>
+					<Anchor point="topleft" relativePoint="topleft" relativeTo="">
+						<AbsPoint x="0" y="0" />
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentMinus" inherits="EA_Button_DefaultMinus" handleinput="false" >
+				<Anchors>
+					<Anchor point="topleft" relativePoint="topleft" relativeTo="">
+						<AbsPoint x="0" y="0" />
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentText" inherits="EA_Button_DefaultText" handleinput="false" textalign="left">
+				<Size>
+					<AbsPoint x="400" y="32" />
+				</Size>
+				<Anchors>
+					<Anchor point="topleft" relativePoint="topleft" relativeTo="">
+						<AbsPoint x="40" y="0" />
+					</Anchor>
+				</Anchors>
+			</Button>
+		</Windows>
+	</Window>
+</Windows>
+</Interface>

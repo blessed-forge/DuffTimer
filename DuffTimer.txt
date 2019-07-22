@@ -1,0 +1,20 @@
+This addon will help you to track buffs/debuffs on you, your friendly target and hostile target. 
+
+Note: The reason why I have created this addon is that the author of zbuffbar decided not to update nor support it anymore at that time. But since I have created this addon already, I will continue to update and support DuffTimer as much as possible no matter what the author of zbuffbar decides to do next. Besides, the mechanism of these two addons are different, zbb is based on the how the default buff/debuff icons works (at least originally, not sure for now), but DuffTimer is closer to WhinySpellTimer with modifications for enhancement and performance improvement. 
+
+This addon requires LibSlash 
+
+There are four sets of bars in total: 
+
+Player Buffs bar 
+This will show all of the buffs that are currently on yourself 
+Player Debuffs bar 
+This will show all of the debuffs that are currently on yourself 
+Friendly Target Buffs bar 
+This will show all of the buffs that are currently on your friendly target which are casted by you 
+Hostile Target Debuffs bar 
+This will show all of the debuffs that are currently on your hostile target which are casted by you 
+
+Type /duff or /dufftimer to bring up the customization window.
+Use the Layout Editor for resizing and positioning.
+

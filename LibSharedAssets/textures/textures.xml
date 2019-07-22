@@ -1,0 +1,91 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+   <Assets>
+        <Texture name="squared_v_gradient" file="LibSharedAssets\textures\vert_gradient.dds" />
+        <Texture name="squared_v_gradient2" file="LibSharedAssets\textures\vert_gradient2.dds" />
+        <Texture name="squared_h_gradient" file="LibSharedAssets\textures\horiz_gradient.dds" />
+        <Texture name="squared_h_gradient2" file="LibSharedAssets\textures\horiz_gradient2.dds" />
+	<Texture name="XP_Fill" file="LibSharedAssets\textures\XPFill.tga" />
+        
+        <Texture name="squared_bar_1" file="LibSharedAssets\textures\bar1.dds" />
+        <Texture name="squared_bar_2" file="LibSharedAssets\textures\bar2.dds" />
+        <Texture name="squared_bar_3" file="LibSharedAssets\textures\bar3.dds" />
+        <Texture name="squared_bar_4" file="LibSharedAssets\textures\bar4.dds" />
+        <Texture name="squared_bar_5" file="LibSharedAssets\textures\bar5.dds" />
+        <Texture name="squared_bar_6" file="LibSharedAssets\textures\bar6.dds" />
+        
+        <Texture name="squared_vbar_1" file="LibSharedAssets\textures\bar1_v.dds" />
+        <Texture name="squared_vbar_2" file="LibSharedAssets\textures\bar2_v.dds" />
+        <Texture name="squared_vbar_3" file="LibSharedAssets\textures\bar3_v.dds" />
+        <Texture name="squared_vbar_4" file="LibSharedAssets\textures\bar4_v.dds" />
+        <Texture name="squared_vbar_5" file="LibSharedAssets\textures\bar5_v.dds" />
+        
+        <Texture name="squared_diagonal_stripe" file="LibSharedAssets\textures\stripey_bar.dds" />
+        <Texture name="squared_checkered" file="LibSharedAssets\textures\checkered.dds" />
+        
+        <Texture name="squared_border_1" file="LibSharedAssets\textures\alpha_border.dds" />
+		
+		<Texture name="SharedMediaAluminium" file="LibSharedAssets\textures\Aluminium.tga" />
+		<Texture name="SharedMediaArmory" file="LibSharedAssets\textures\Armory.tga" />
+		<Texture name="SharedMediaBantoBar" file="LibSharedAssets\textures\BantoBar.tga" />
+		<Texture name="SharedMediaBars" file="LibSharedAssets\textures\Bars.tga" />
+		<Texture name="SharedMediaBumps" file="LibSharedAssets\textures\Bumps.tga" />
+		<Texture name="SharedMediaButton" file="LibSharedAssets\textures\Button.tga" />
+		<Texture name="SharedMediaCharcoal" file="LibSharedAssets\textures\Charcoal.tga" />
+		<Texture name="SharedMediaCilo" file="LibSharedAssets\textures\Cilo.tga" />
+		<Texture name="SharedMediaCloud" file="LibSharedAssets\textures\Cloud.tga" />
+		<Texture name="SharedMediacombo" file="LibSharedAssets\textures\combo.tga" />
+		<Texture name="SharedMediaComet" file="LibSharedAssets\textures\Comet.tga" />
+		<Texture name="SharedMediaDabs" file="LibSharedAssets\textures\Dabs.tga" />
+		<Texture name="SharedMediaDarkBottom" file="LibSharedAssets\textures\DarkBottom.tga" />
+		<Texture name="SharedMediaDiagonal" file="LibSharedAssets\textures\Diagonal.tga" />
+		<Texture name="SharedMediaEmpty" file="LibSharedAssets\textures\Empty.tga" />
+		<Texture name="SharedMediaFalumn" file="LibSharedAssets\textures\Falumn.tga" />
+		<Texture name="SharedMediaFifths" file="LibSharedAssets\textures\Fifths.tga" />
+		<Texture name="SharedMediaFlat" file="LibSharedAssets\textures\Flat.tga" />
+		<Texture name="SharedMediaFourths" file="LibSharedAssets\textures\Fourths.tga" />
+		<Texture name="SharedMediaFrost" file="LibSharedAssets\textures\Frost.tga" />
+		<Texture name="SharedMediaGlamour" file="LibSharedAssets\textures\Glamour.tga" />
+		<Texture name="SharedMediaGlamour2" file="LibSharedAssets\textures\Glamour2.tga" />
+		<Texture name="SharedMediaGlamour3" file="LibSharedAssets\textures\Glamour3.tga" />
+		<Texture name="SharedMediaGlamour4" file="LibSharedAssets\textures\Glamour4.tga" />
+		<Texture name="SharedMediaGlamour5" file="LibSharedAssets\textures\Glamour5.tga" />
+		<Texture name="SharedMediaGlamour6" file="LibSharedAssets\textures\Glamour6.tga" />
+		<Texture name="SharedMediaGlamour7" file="LibSharedAssets\textures\Glamour7.tga" />
+		<Texture name="SharedMediaGlass" file="LibSharedAssets\textures\Glass.tga" />
+		<Texture name="SharedMediaGlaze" file="LibSharedAssets\textures\Glaze.tga" />
+		<Texture name="SharedMediaGlaze2" file="LibSharedAssets\textures\Glaze2.tga" />
+		<Texture name="SharedMediaGloss" file="LibSharedAssets\textures\Gloss.tga" />
+		<Texture name="SharedMediaGraphite" file="LibSharedAssets\textures\Graphite.tga" />
+		<Texture name="SharedMediaGrid" file="LibSharedAssets\textures\Grid.tga" />
+		<Texture name="SharedMediaHatched" file="LibSharedAssets\textures\Hatched.tga" />
+		<Texture name="SharedMediaHealbot" file="LibSharedAssets\textures\Healbot.tga" />
+		<Texture name="SharedMediaLiteStep" file="LibSharedAssets\textures\LiteStep.tga" />
+		<Texture name="SharedMediaLiteStepLite" file="LibSharedAssets\textures\LiteStepLite.tga" />
+		<Texture name="SharedMediaLyfe" file="LibSharedAssets\textures\Lyfe.tga" />
+		<Texture name="SharedMediaMelli" file="LibSharedAssets\textures\Melli.tga" />
+		<Texture name="SharedMediaMelliDark" file="LibSharedAssets\textures\MelliDark.tga" />
+		<Texture name="SharedMediaMelliDarkRough" file="LibSharedAssets\textures\MelliDarkRough.tga" />
+		<Texture name="SharedMediaMinimalist" file="LibSharedAssets\textures\Minimalist.tga" />
+		<Texture name="SharedMediaOtravi" file="LibSharedAssets\textures\Otravi.tga" />
+		<Texture name="SharedMediaOutline" file="LibSharedAssets\textures\Outline.tga" />
+		<Texture name="SharedMediaPerl" file="LibSharedAssets\textures\Perl.tga" />
+		<Texture name="SharedMediaPerl2" file="LibSharedAssets\textures\Perl2.tga" />
+		<Texture name="SharedMediaPill" file="LibSharedAssets\textures\Pill.tga" />
+		<Texture name="SharedMediaRain" file="LibSharedAssets\textures\Rain.tga" />
+		<Texture name="SharedMediaRocks" file="LibSharedAssets\textures\Rocks.tga" />
+		<Texture name="SharedMediaRound" file="LibSharedAssets\textures\Round.tga" />
+		<Texture name="SharedMediaRuben" file="LibSharedAssets\textures\Ruben.tga" />
+		<Texture name="SharedMediaRunes" file="LibSharedAssets\textures\Runes.tga" />
+		<Texture name="SharedMediaSkewed" file="LibSharedAssets\textures\Skewed.tga" />
+		<Texture name="SharedMediaSmooth" file="LibSharedAssets\textures\Smooth.tga" />
+		<Texture name="SharedMediaSmoothv2" file="LibSharedAssets\textures\Smoothv2.tga" />
+		<Texture name="SharedMediaSmudge" file="LibSharedAssets\textures\Smudge.tga" />
+		<Texture name="SharedMediaSteel" file="LibSharedAssets\textures\Steel.tga" />
+		<Texture name="SharedMediaStriped" file="LibSharedAssets\textures\Striped.tga" />
+		<Texture name="SharedMediaTube" file="LibSharedAssets\textures\Tube.tga" />
+		<Texture name="SharedMediaWater" file="LibSharedAssets\textures\Water.tga" />
+		<Texture name="SharedMediaWglass" file="LibSharedAssets\textures\Wglass.tga" />
+		<Texture name="SharedMediaWisps" file="LibSharedAssets\textures\Wisps.tga" />
+		<Texture name="SharedMediaXeon" file="LibSharedAssets\textures\Xeon.tga" />
+   </Assets>
+</Interface>

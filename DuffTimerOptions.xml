@@ -1,0 +1,444 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+<!--	Project: DuffTimer.	Project Author:  Thurwell	Project Date: 2009-05-09T04:47:09Z
+	Project Revision: 129	Project Version: v2.2.3 
+	File Author: Thurwell	File Revision: 129	File Date:	2009-05-09T04:47:09Z	-->
+<Windows>
+	<ScrollWindow name="DuffTimerOptions_GeneralTab_Template" childscrollwindow="$parentScroll" scrollbar="$parent_Scrollbar" lineheight="18" >
+		<Windows>
+			<VerticalScrollbar name="$parent_Scrollbar" inherits="EA_ScrollBar_DefaultVerticalChain" layer="popup" >
+				<Anchors>
+					<Anchor point="topright" relativePoint="topright" >
+						<AbsPoint x="0" y="0" />
+					</Anchor>
+				</Anchors>
+			</VerticalScrollbar>
+
+			<Window name="$parentScroll" >
+				<Anchors>
+					<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+						<AbsPoint x="0" y="0" />
+					</Anchor>
+					<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent">
+						<AbsPoint x="0" y="60" />
+					</Anchor>
+				</Anchors>
+
+				<Windows>
+					<Window name="$parent_refresh" inherits="DuffTimerOptions_EditBox" >
+						<Anchors>
+							<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+								<AbsPoint x="30" y="20" />
+							</Anchor>
+						</Anchors>
+					</Window>
+					<Window name="$parent_alpha" inherits="DuffTimerOptions_Slider" >
+						<Anchors>
+							<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_refresh">
+								<AbsPoint x="0" y="0" />
+							</Anchor>
+						</Anchors>
+					</Window>
+					<Window name="$parent_BGalpha" inherits="DuffTimerOptions_Slider" >
+						<Anchors>
+							<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_alpha">
+								<AbsPoint x="0" y="0" />
+							</Anchor>
+						</Anchors>
+					</Window>
+					<Window name="$parent_textAlpha" inherits="DuffTimerOptions_Slider" >
+						<Anchors>
+							<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_BGalpha">
+								<AbsPoint x="0" y="0" />
+							</Anchor>
+						</Anchors>
+					</Window>
+					<Window name="$parent_iconAlpha" inherits="DuffTimerOptions_Slider" >
+						<Anchors>
+							<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_textAlpha">
+								<AbsPoint x="0" y="0" />
+							</Anchor>
+						</Anchors>
+					</Window>
+					<Window name="$parent_windows" inherits="DuffTimerOptions_EditBox" >
+						<Anchors>
+							<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_iconAlpha">
+								<AbsPoint x="0" y="0" />
+							</Anchor>
+						</Anchors>
+					</Window>
+					<Window name="$parent_AdvHeader" inherits="DuffTimerOptionsAdvHeader" >
+						<Anchors>
+							<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_windows">
+								<AbsPoint x="0" y="0" />
+							</Anchor>
+						</Anchors>					
+					</Window>
+					<Window name="$parent_Adv" handleinput="true">
+						<Size>
+							<AbsPoint x="350" y="400" />
+						</Size>
+						<Anchors>
+							<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_AdvHeader">
+								<AbsPoint x="0" y="0" />
+							</Anchor>
+						</Anchors>
+						<Windows>
+							<HorizontalResizeImage name="$parentTopRule" inherits="EA_BrownHorizontalRule" >
+								<Anchors>
+									<Anchor point="topleft" relativePoint="topleft" relativeTo="">
+										<AbsPoint x="0" y="0" />
+									</Anchor>
+									<Anchor point="topright" relativePoint="topright" relativeTo="">
+										<AbsPoint x="0" y="0" />
+									</Anchor>
+								</Anchors>
+							</HorizontalResizeImage>
+							<HorizontalResizeImage name="$parentBottomRule" inherits="EA_BrownHorizontalRule" >
+								<Anchors>
+									<Anchor point="bottomleft" relativePoint="bottomleft" relativeTo="">
+										<AbsPoint x="0" y="0" />
+									</Anchor>
+									<Anchor point="bottomright" relativePoint="bottomright" relativeTo="">
+										<AbsPoint x="0" y="0" />
+									</Anchor>
+								</Anchors>
+							</HorizontalResizeImage>
+
+							<Window name="$parent_font" inherits="DuffTimerOptions_LargeComboBox" >
+								<Anchors>
+									<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTopRule">
+										<AbsPoint x="0" y="10" />
+									</Anchor>
+								</Anchors>
+							</Window>
+							<Window name="$parent_horizontalTexture" inherits="DuffTimerOptions_LargeComboBox" >
+								<Anchors>
+									<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_font">
+										<AbsPoint x="0" y="0" />
+									</Anchor>
+								</Anchors>
+							</Window>
+							<Window name="$parent_verticalTexture" inherits="DuffTimerOptions_LargeComboBox" >
+								<Anchors>
+									<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_horizontalTexture">
+										<AbsPoint x="0" y="0" />
+									</Anchor>
+								</Anchors>
+							</Window>
+							<Window name="$parent_classicColors" inherits="DuffTimerOptions_CheckBox" >
+								<Anchors>
+									<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_verticalTexture">
+										<AbsPoint x="0" y="0" />
+									</Anchor>
+								</Anchors>
+							</Window>
+							<Window name="$parent_scaleText" inherits="DuffTimerOptions_EditBox" >
+								<Anchors>
+									<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_classicColors">
+										<AbsPoint x="0" y="0" />
+									</Anchor>
+								</Anchors>
+							</Window>
+						</Windows>
+					</Window>
+				</Windows>
+			</Window>
+		</Windows>
+	</ScrollWindow>
+	<ScrollWindow name="DuffTimerOptions_WinTab" childscrollwindow="$parentScroll" scrollbar="$parent_Scrollbar" lineheight="18" >
+		<Windows>
+			<VerticalScrollbar name="$parent_Scrollbar" inherits="EA_ScrollBar_DefaultVerticalChain" layer="popup" >
+				<Anchors>
+					<Anchor point="topright" relativePoint="topright" >
+						<AbsPoint x="0" y="0" />
+					</Anchor>
+				</Anchors>
+			</VerticalScrollbar>
+			<Window name="$parentScroll" >
+				<Anchors>
+					<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+						<AbsPoint x="0" y="0" />
+					</Anchor>
+					<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent">
+						<AbsPoint x="0" y="60" />
+					</Anchor>
+				</Anchors>
+				<Windows>
+					<Window name="$parent_enable" inherits="DuffTimerOptions_CheckBox" >
+						<Anchors>
+							<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+								<AbsPoint x="45" y="20" />
+							</Anchor>
+						</Anchors>
+					</Window>
+					<Window name="$parent_windowType" inherits="DuffTimerOptions_ComboBox" >
+						<Anchors>
+							<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_enable">
+								<AbsPoint x="0" y="0" />
+							</Anchor>
+						</Anchors>
+					</Window>
+					<Window name="$parent_barType" inherits="DuffTimerOptions_ComboBox" >
+						<Anchors>
+							<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_windowType">
+								<AbsPoint x="0" y="0" />
+							</Anchor>
+						</Anchors>
+					</Window>
+					<Window name="$parent_maxDuration" inherits="DuffTimerOptions_EditBox" >
+						<Anchors>
+							<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_barType">
+								<AbsPoint x="0" y="0" />
+							</Anchor>
+						</Anchors>
+					</Window>
+					<Window name="$parent_showPermanent" inherits="DuffTimerOptions_CheckBox" >
+						<Anchors>
+							<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_maxDuration">
+								<AbsPoint x="0" y="0" />
+							</Anchor>
+						</Anchors>
+					</Window>
+					<Window name="$parent_castBySelf" inherits="DuffTimerOptions_ComboBox" >
+						<Anchors>
+							<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_showPermanent">
+								<AbsPoint x="0" y="0" />
+							</Anchor>
+						</Anchors>
+					</Window>
+					<Window name="$parent_castByOthers" inherits="DuffTimerOptions_ComboBox" >
+						<Anchors>
+							<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_castBySelf">
+								<AbsPoint x="0" y="0" />
+							</Anchor>
+						</Anchors>
+					</Window>
+					<Window name="$parent_rowGrowth" inherits="DuffTimerOptions_ComboBox" >
+						<Anchors>
+							<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_castByOthers">
+								<AbsPoint x="0" y="0" />
+							</Anchor>
+						</Anchors>
+					</Window>
+					<Window name="$parent_maxRows" inherits="DuffTimerOptions_EditBox" >
+						<Anchors>
+							<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_rowGrowth">
+								<AbsPoint x="0" y="0" />
+							</Anchor>
+						</Anchors>
+					</Window>
+					<Window name="$parent_AdvHeader" inherits="DuffTimerOptionsAdvHeader" >
+						<Anchors>
+							<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_maxRows">
+								<AbsPoint x="0" y="0" />
+							</Anchor>
+						</Anchors>					
+					</Window>
+					<Window name="$parent_Adv" handleinput="true">
+						<Size>
+							<AbsPoint x="350" y="400" />
+						</Size>
+						<Anchors>
+							<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_AdvHeader">
+								<AbsPoint x="0" y="0" />
+							</Anchor>
+						</Anchors>
+						<Windows>
+							<HorizontalResizeImage name="$parentTopRule" inherits="EA_BrownHorizontalRule" >
+								<Anchors>
+									<Anchor point="topleft" relativePoint="topleft" relativeTo="">
+										<AbsPoint x="0" y="0" />
+									</Anchor>
+									<Anchor point="topright" relativePoint="topright" relativeTo="">
+										<AbsPoint x="0" y="0" />
+									</Anchor>
+								</Anchors>
+							</HorizontalResizeImage>
+							<HorizontalResizeImage name="$parentBottomRule" inherits="EA_BrownHorizontalRule" >
+								<Anchors>
+									<Anchor point="bottomleft" relativePoint="bottomleft" relativeTo="">
+										<AbsPoint x="0" y="0" />
+									</Anchor>
+									<Anchor point="bottomright" relativePoint="bottomright" relativeTo="">
+										<AbsPoint x="0" y="0" />
+									</Anchor>
+								</Anchors>
+							</HorizontalResizeImage>
+							<Window name="$parent_columnGrowth" inherits="DuffTimerOptions_ComboBox" >
+								<Anchors>
+									<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+										<AbsPoint x="0" y="10" />
+									</Anchor>
+								</Anchors>
+							</Window>
+							<Window name="$parent_maxColumns" inherits="DuffTimerOptions_EditBox" >
+								<Anchors>
+									<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_columnGrowth">
+										<AbsPoint x="0" y="0" />
+									</Anchor>
+								</Anchors>
+							</Window>
+							<Window name="$parent_minDuration" inherits="DuffTimerOptions_EditBox" >
+								<Anchors>
+									<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_maxColumns">
+										<AbsPoint x="0" y="0" />
+									</Anchor>
+								</Anchors>
+							</Window>
+							<Window name="$parent_tooltip" inherits="DuffTimerOptions_ComboBox" >
+								<Anchors>
+									<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_minDuration">
+										<AbsPoint x="0" y="0" />
+									</Anchor>
+								</Anchors>
+							</Window>
+							<Window name="$parent_sortOrder" inherits="DuffTimerOptions_ComboBox" >
+								<Anchors>
+									<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_tooltip">
+										<AbsPoint x="0" y="0" />
+									</Anchor>
+								</Anchors>
+							</Window>
+							<Window name="$parent_reverseSort" inherits="DuffTimerOptions_CheckBox" >
+								<Anchors>
+									<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_sortOrder">
+										<AbsPoint x="0" y="0" />
+									</Anchor>
+								</Anchors>
+							</Window>
+							<Window name="$parent_worldAttach" inherits="DuffTimerOptions_CheckBox" >
+								<Anchors>
+									<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_reverseSort">
+										<AbsPoint x="0" y="0" />
+									</Anchor>
+								</Anchors>
+							</Window>
+							<Window name="$parent_worldX" inherits="DuffTimerOptions_EditBox" >
+								<Size>
+									<AbsPoint x="125" y="35" />
+								</Size>		
+								<Anchors>
+									<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_worldAttach">
+										<AbsPoint x="0" y="0" />
+									</Anchor>
+								</Anchors>
+							</Window>
+							<Window name="$parent_worldY" inherits="DuffTimerOptions_EditBox" >
+								<Size>
+									<AbsPoint x="125" y="35" />
+								</Size>		
+								<Anchors>
+									<Anchor point="bottomright" relativePoint="bottomleft" relativeTo="$parent_worldX">
+										<AbsPoint x="100" y="0" />
+									</Anchor>
+								</Anchors>
+							</Window>
+						</Windows>
+					</Window>
+				</Windows>
+			</Window>
+		</Windows>
+	</ScrollWindow>
+	<Window name="DuffTimerOptions" layer="default" movable="true" savesettings="false" >
+		<Size>
+			<AbsPoint x="460" y="600" />
+		</Size>
+		<Anchors>
+			<Anchor point="center" relativePoint="center" relativeTo="Root">
+				<AbsPoint x="0" y="0"/>
+			</Anchor>
+		</Anchors>
+		<Windows>
+			<Window name="$parentTitleBar" inherits="EA_TitleBar_Default" popable="false"/>
+			<Label name="$parentversion" font="font_clear_tiny" textalign="right">
+				<Size>
+					<AbsPoint x="55" y="15"/>
+				</Size>				
+				<Anchors>
+					<Anchor point="topright" relativePoint="topright" relativeTo="$parent">
+						<AbsPoint x="-40" y="17"/>
+					</Anchor>
+				</Anchors>
+			</Label>
+			<Button name="$parentClose" inherits="EA_Button_DefaultWindowClose" >
+				<EventHandlers>
+			      		<EventHandler event="OnLButtonUp" function="DuffTimer.Options.OnOptionsButton" />
+				</EventHandlers>
+                	</Button>
+			<Window name="$parentBackground" layer="background" popable="false">
+				<Size>
+					<AbsPoint x="460" y="570"/>
+				</Size>
+				<Anchors>
+					<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+						<AbsPoint x="0" y="30"/>
+					</Anchor>
+				</Anchors>
+				<Windows>
+					<Window name="$parent_BackgroundFill" inherits="EA_Window_DefaultContextMenuFrame" layer="background" >
+						<Size>
+							<AbsPoint x="460" y="570"/>
+						</Size>
+					</Window>
+					<FullResizeImage name="$parent_BackgroundBorder" inherits="SettingsSectionBackground" />
+				</Windows>
+			</Window>
+			<Window name="$parent_ButtonBackground" inherits="EA_Window_DefaultButtonBottomFrame" />
+			<Button name="$parent_ApplyButton" inherits="EA_Button_DefaultResizeable" textAutoFitMinScale="0.5">
+				<EventHandlers>
+					<EventHandler event="OnLButtonUp" function="DuffTimer.Options.Apply" />
+				</EventHandlers>
+				<Size>
+					<AbsPoint x="100" y="40" />
+				</Size>
+				<Anchors>
+					<Anchor point="bottomright" relativePoint="bottom" relativeTo="$parent_ButtonBackground">
+						<AbsPoint x="-60" y="-5" />
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parent_SaveButton" inherits="EA_Button_DefaultResizeable" textAutoFitMinScale="0.5">
+				<EventHandlers>
+					<EventHandler event="OnLButtonUp" function="DuffTimer.Options.OnSaveButton" />
+				</EventHandlers>
+				<Size>
+					<AbsPoint x="100" y="40" />
+				</Size>
+				<Anchors>
+					<Anchor point="bottomleft" relativePoint="bottom" relativeTo="$parent_ButtonBackground">
+						<AbsPoint x="60" y="-5" />
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parent_RevertButton" inherits="EA_Button_DefaultResizeable" textAutoFitMinScale="0.5">
+				<EventHandlers>
+					<EventHandler event="OnLButtonUp" function="DuffTimer.Options.OnRevertButton" />
+				</EventHandlers>
+				<Size>
+					<AbsPoint x="100" y="40" />
+				</Size>
+				<Anchors>
+					<Anchor point="bottomleft" relativePoint="bottom" relativeTo="$parent_ButtonBackground">
+						<AbsPoint x="170" y="-5" />
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parent_TestButton" inherits="EA_Button_DefaultResizeable" textAutoFitMinScale="0.5">
+				<EventHandlers>
+					<EventHandler event="OnLButtonUp" function="DuffTimer.Options.OnTestButton" />
+					<EventHandler event="OnMouseOver" function="DuffTimer.Options.OnTestButtonToolTip" />	
+				</EventHandlers>
+				<Size>
+					<AbsPoint x="100" y="40" />
+				</Size>
+				<Anchors>
+					<Anchor point="bottomright" relativePoint="bottom" relativeTo="$parent_ButtonBackground">
+						<AbsPoint x="-170" y="-5" />
+					</Anchor>
+				</Anchors>
+			</Button>
+		</Windows>
+	</Window>
+</Windows>
+</Interface>
+
